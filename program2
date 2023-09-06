@@ -1,0 +1,70 @@
+#8
+﻿
+
+class Rectangle:
+    def __init__(self, width, height, corner_x, corner_y):
+      self.width = width
+      self.height = height
+      self.corner_x = corner_x
+      self.corner_y = corner_y
+def get_center(self):
+   center_x = self.corner_x + self.width / 2
+   center_y = self.corner_y + self.height / 2 return center_x, center_y
+   def get_area(self):
+return self.width * self.height
+def get_perimeter(self):
+    return 2* (self.width + self.height)
+#Example usage:
+rect Rectangle(5, 10, 0, 0)
+center rect.get_center()
+area rect.get_area()
+perimeter = rect.get_perimeter()
+print("Center:", center) print("Area: ", area)
+print("Perimeter:", perimeter)
+#7
+﻿
+
+class Person:
+      def __init__(self, USN, Name, dob, gender):
+         self.USN= USN
+         self.Name = Name
+         self.dob = dob
+         self.gender = gender
+class Student (Person):
+    def __init__(self, USN, Name, dob, gender, Marks, Attendance): 
+        super().__init__(USN, Name, dob, gender)
+        self.Marks Marks
+        self.Attendance = Attendance
+class MarksAttendance:
+    def __init__(self, Marks, Attendance):
+        self.Marks = Marks
+        self.Attendance = Attendance
+# Create an instance of the student class
+S = Student ("ILAB16CS005", "XYZ", "18-1-90", "M", 85, 98) # Display the details of the student
+print("USN: ", S.USN)
+print("Name:", S.Name)
+print("Date of Birth:", S.dob)
+print("Gender:", S.gender)
+print("Marks: ", S.Marks)
+print("Attendance:", S.Attendance)
+
+#6
+﻿
+
+def count_lines_words_characters (file_path):
+    line_count = 0
+    word_count = 0
+    character_count = 0
+    with open(file_path, 'r') as file: 
+         for line in file: 
+             line_count += 1
+             words line.split() 
+             word_count += len(words)
+             character_count += len(line)
+print("Number of lines:", line_count)
+print("Number of words:", word_count)
+print("Number of characters:", character_count)
+#Example usage:
+﻿
+file_path = "input.txt" # Replace with the actual file path
+count_lines_words_characters (file_path)
