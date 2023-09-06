@@ -25,7 +25,7 @@ def remove_dupilcates_and_sort(sentence):
 sentence = input("enter a sentecne:")
 result = remove_duplicates_and_sort(sentence)
 print(result)
-#4
+#4 find the length of the string
 def find_length(s):
     if s=="":
         return 0 
@@ -34,4 +34,26 @@ def find_length(s):
     s= "hello world"
     length= find_length(s)
     print(f"the length of the string'{s}' is {length}.") 
+#4 find the smallest element in a list 
+def find_smallest(lst):
+    if len(lst)==1:
+        return lst[0]
+    else:
+        smallest = find_smallest(lst[1:])
+        return smallest if smallest < lst[0] else lst[0]
+    lst= [5,2,8,1,9,3]
+    smallest = find_smallest(lst)
+    print(smallest)
 #5
+add file
+
+def copy_odd_lines(from_file, to_file):
+    with open(from_file, 'r')as f1, open(to_file,'w') as f2:
+        lines=f1.readlines()
+        odd_lines = [line for i , line in enumerate(lines) if i % 2 !=0]
+        f2.writelines(odd_lines)
+        print("copy successful")
+from_file= 'input.txt'
+to_file='output.txt'
+copy_odd_lines(from_file, to_file)
+#6
